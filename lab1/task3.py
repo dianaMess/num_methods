@@ -24,22 +24,28 @@ def chol(A, n):
     return L
 
 for i in range(500, 600, 100):
-    a = np.zeros((i, i))
-    np.fill_diagonal(a, random.randint(30, 50))
-    np.fill_diagonal(a[1:], random.randint(1,9))
-    np.fill_diagonal(a[:, 1:], random.randint(8, 15))
+    a = np.random.randint(10, size=(i, i))
+    for k in range(i):
+        for l in range(i):
+            if k != l:
+                a[k][l] = a[l][k]
+    s = np.sum(np.abs(a), axis=1)
+    for k in range(i):
+        a[k][k] = s[k]
     v = np.random.randint(20, size=i)
     b = a.dot(v)
-    D = chol(a, i)
-    y = sla.solve(D, b)
-    D1 = D.transpose()
-    x = sla.solve(D1, y)
-stop = time.time()
-print(stop - start)
-#    L = sla.cholesky(a, lower=True)
-#    t = sla.solve(L, b)
-#    L1 = L.transpose()
-#    d = sla.solve(L1, t)
+#    D = chol(a, i)
+#    y = sla.solve(D, b)
+#    D1 = D.transpose()
+#    x = sla.solve(D1, y)
+#stop = time.time()
+#print(stop - start)
+    L = sla.cholesky(a, lower=True)
+    t = sla.solve(L, b)
+    L1 = L.transpose()
+    d = sla.solve(L1, t)
+    stop = time.time()
+    print(stop - start)
 #    if np.allclose(d, x) == True:
 #        print('OK')
 #    else:

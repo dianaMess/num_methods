@@ -40,12 +40,12 @@ Ax = f. Дана матрица A с диагональным преоблада
 Ax = f. Дана матрица А и вектор f. Найти х.  
 ### Алгоритм решения  
 Каноническая форма:  
-!  
-при !  
-!
-!
-!
-!
+![picA](lab2/formula/11.gif) 
+при ![picB](lab2/formula/12.gif)  
+![picC](lab2/formula/13.gif)  
+![picD](lab2/formula/14.gif)  
+![picE](lab2/formula/15.gif)  
+![picF](lab2/formula/16.gif)
 ### Результаты  
 Реализация метода Зейделя прошла 5 тестов с матрицами размерности от 100 до 500  
-!
+![pic_s](lab2/pic_seidel.png)

@@ -37,3 +37,5 @@ for i in range(100, 200, 100):
         print('OK')
     else:
         print('NO')
+#    if np.allclose(x, w) == True:
+#    if np.allclose(x, w) == True:

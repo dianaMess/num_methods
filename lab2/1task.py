@@ -40,7 +40,7 @@ eps = 0.001
 #x = solve(a, f, eps, n)
 #print(y)
 #print(x)
-for i in range(30, 36, 1):
+for i in range(50, 55, 5):
 #    c = np.random.randint(5, size=(i, i))
 #    np.fill_diagonal(c, 30)
     c = np.random.randint(5, size=(i, i))

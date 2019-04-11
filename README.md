@@ -54,7 +54,6 @@ Ax = f. Дана матрица А и вектор f. Найти х.
 ### Алгоритм решения  
 Каноническая форма:  
 ![picA](lab2/formula/11.gif) 
-при ![picB](lab2/formula/12.gif)  
 ![picC](lab2/formula/22.gif)  
 ![picD](lab2/formula/23.gif)  
 ![picE](lab2/formula/24.gif)  
@@ -64,4 +63,4 @@ Ax = f. Дана матрица А и вектор f. Найти х.
 - 100 х 100 - 67 с.  
 - 200 х 200 - 139 с.  
 Также хочу приложить график зависимостей для методов Зейделя и Якоби  
-![pic_s](lab2/show.png)
+![pic_s](lab2/pic_show.png)

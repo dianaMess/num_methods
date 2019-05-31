@@ -19,17 +19,18 @@ m = int(input())
 x = np.array(n)
 y = np.array(n)
 z = np.array(m)
-f = open('f.txt', 'r')
-i = 1;
-for elem in f:
-    if i == 1:
-        x = list(map(float,elem.split()))
-    elif i == 2:
-        y = list(map(float,elem.split()))
-    else:
-        z = list(map(float,elem.split()))
-    i += 1
-f.close()
+f1 = open('example/train.dat', 'r')
+f2 = open('example/train.ans', 'r')
+f3 = open('example/test.dat', 'r')
+for elem in f1:
+    x = list(map(float,elem.split()))
+for elem in f2:
+    y = list(map(float,elem.split()))
+for elem in f3:
+    z = list(map(float,elem.split()))
+f1.close()
+f2.close()
+f3.close()
 size = len(z)
 for i in range(size):
     val = compute_value(x, y, z[i])
